@@ -9,8 +9,7 @@
         :root {
             --uci-blue: #1b3d6d;
             --uci-gold: #fecc07;
-            --pyp-teal: #0077b6;
-            --soft-red: #e74c3c; /* 🎨 還原為第一次大紅底色時的溫暖亮紅色 */
+            --soft-red: #e74c3c; /* 🎨 經典溫暖亮紅色底色背景 */
             --dark-red: #c0392b;
         }
 
@@ -37,11 +36,11 @@
             overflow: hidden;
         }
 
-        /* 📄 剛性分頁與頁面保護晶片 ── 確保 A4 物理比例 */
+        /* 📄 剛性分頁與頁面保護晶片 ── 確保 A4 物理比例與留白舒適感 */
         .page { 
             position: relative;
             background: #fff;
-            padding: 30px 40px 0 40px; /* 底部留白交給 kids.png 貼滿 */
+            padding: 30px 40px 0 40px; 
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -53,7 +52,7 @@
             flex: 1;
         }
 
-        /* 🚀 第一頁：經典紅底底色背景與 Logo 左右並排艙 */
+        /* 🚀 第一頁：經典紅底底色背景與 Logo 左右並排格式 */
         .header-flex-box {
             display: flex;
             align-items: center;
@@ -121,7 +120,7 @@
 
         h2 { 
             color: #2c3e50; 
-            border-bottom: 2px solid var(--soft-red); 
+            border-bottom: 2px solid var(--uci-blue); 
             padding-bottom: 4px; 
             margin-top: 20px; 
             margin-bottom: 12px; 
@@ -132,33 +131,6 @@
             font-size: 13px;
             margin: 0 0 8px 0;
             text-align: justify;
-        }
-
-        /* 💡 課程號角看板（整段置中） */
-        .pyp-badge {
-            background-color: transparent;
-            border-left: none; 
-            padding: 5px 15px;
-            margin: 20px 0;
-            border-radius: 0;
-            text-align: center; 
-        }
-
-        .pyp-badge h4 {
-            margin: 0 0 6px 0;
-            color: var(--soft-red);
-            font-size: 16px;
-            font-weight: bold;
-            line-height: 1.4;
-            text-align: center;
-        }
-
-        .pyp-badge p {
-            margin: 0 0 6px 0;
-            font-size: 13.5px;
-            color: #333;
-            line-height: 1.6;
-            text-align: center;
         }
 
         /* 🔒 剛性方格表格地基 */
@@ -181,8 +153,8 @@
         }
 
         th { 
-            background-color: #fdebd0; 
-            color: var(--soft-red); 
+            background-color: #ebf5fb; 
+            color: var(--uci-blue); 
             text-align: center; 
             font-weight: bold;
         }
@@ -192,27 +164,26 @@
         .center-table td.left-align { text-align: left; }
 
         ul { padding-left: 18px; margin-bottom: 10px; }
-        li { margin-bottom: 5px; font-size: 12.5px; }
-
-        .grammar-section { 
-            background-color: #fafafa; 
-            border-left: 4px solid var(--soft-red); 
-            padding: 10px; 
-            margin-bottom: 15px; 
-            border-radius: 4px; 
-            font-size: 12.5px;
-        }
+        li { margin-bottom: 12px; font-size: 12.5px; }
 
         .note { 
             font-size: 11px; 
             color: #7f8c8d; 
             font-weight: normal; 
-            margin-top: 2px; 
+            margin-top: 4px; 
             display: block; 
         }
 
-        .highlight { font-weight: bold; color: var(--soft-red); }
-        .eng-text { color: #555; display: block; margin-top: 1px; font-size: 11.5px; }
+        .footer { 
+            text-align: center; 
+            margin-top: 25px; 
+            font-weight: bold; 
+            font-size: 15px; 
+            color: #e74c3c; 
+            line-height: 1.6;
+        }
+
+        .eng-text { color: #555; display: block; margin-top: 2px; font-size: 11.5px; }
 
         /* 📸 每頁最下方的滿版 kids.png 圖檔晶片 (100% 左右填滿) */
         .footer-image-box {
@@ -312,21 +283,21 @@
             <!-- 🚀 第一頁標題：Let's Go 3 經典紅底並排格式 -->
             <div class="header-flex-box">
                 <div class="title-group">
-                    <h1>✨ <span class="main-title">Let's Go 3</span> <span class="sub-title">Intermediate Class</span> ✨</h1>
-                    <h3>美語大躍進！巴比老師的中階探究遊戲說3級班</h3>
-                    <h3 class="eng-sub">Explore & Express in English! Level 3 Intermediate Class</h3>
+                    <h1>✨ <span class="main-title">Let's Go 3</span> <span class="sub-title">Intermediate English Thinking</span> ✨</h1>
+                    <h3>聽說讀寫全方位！中級美語思維與句型養成班</h3>
+                    <h3 class="eng-sub">Read, Write & Speak with Confidence! Intermediate English Thinking & Sentence Scaffolding Class</h3>
                 </div>
                 <img src="BOBBY ENGLISH SCHOOL_去背檔.png" alt="巴比美語補習班專屬去背標章" class="logo-img">
             </div>
 
             <h2>💡 課程理念 | Course Concept</h2>
-            <p><strong>從單字模仿到完整句子表達！巴比老師用主題探究與互動競賽，帶孩子自信解鎖流利聽說讀寫！</strong></p>
-            <p>進入 Let's Go 3 的黃金進階期，我們不只讓孩子開口說，更著重於日常對話的「雙向延伸與思考」。透過中英雙語生動引導，讓孩子告別碎片化的單字回答，自然而然學會用完整且精準的句子表達自我、分享生活！</p>
-            <p><strong>From single words to complete sentences! Teacher Bobby integrates thematic inquiry and interactive contests to unlock fluent listening, speaking, reading, and writing!</strong></p>
-            <p>In Level 3, we focus on sentence expansion and structural conversation. Through immersive bilingual scaffolding, kids transition smoothly from brief answers to expressing their own thoughts in full, confident English paragraphs.</p>
+            <p><strong>從「愛開口」邁向「有邏輯」！Let's Go 3 正式帶領孩子跨越純口語遊戲，啟動系統化結構。</strong></p>
+            <p>本課程將帶領孩子跨越初階的純口語對話，全面啟動英語閱讀理解、系統化文法結構與精準的單句書寫。巴比老師運用嚴謹而不嚴肅的專業引導，讓孩子自然地將零散單字拼湊成完整且符合邏輯的想法，達到大膽說、自信寫的嶄新里程碑！</p>
+            <p><strong>Moving from fun conversations to structured language! Let's Go 3 introduces foundational reading comprehension, essential grammar rules, and basic sentence writing.</strong></p>
+            <p>This course goes beyond basic oral communication, fully activating reading skills and grammatical frameworks. Through professional guidance, we help kids confidently translate their thoughts into correctly written and spoken English with independence and joy!</p>
 
             <h2>🎯 課程核心教學重點 | Course Highlights</h2>
-            <p>本課程專注於強化孩子的中階溝通語感，全方位扎根美語核心能力：</p>
+            <p>為了幫孩子奠定穩固之中級美語核心實力，本課程專注於以下全方位的學習發展：</p>
             <table>
                 <thead>
                     <tr>
@@ -336,19 +307,24 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="center-text">🗣️ 句型擴展與流利表達<br>Sentence Fluency</td>
-                        <td>熟練運用中階日常社交問答，引導孩子從簡答跳躍到能夠使用主詞、動詞、時間、場所組成的完整長句。<br>
-                        <span class="eng-text">Master intermediate daily Q&As, guiding children to confidently build structured, extended sentences.</span></td>
+                        <td class="center-text">🔤 字母與拼讀閱讀<br>Phonics & Reading</td>
+                        <td>深化字母拼讀技巧，具備高效拼湊並記住單字的能力，逐步培養基礎程度的獨立閱讀素養。<br>
+                        <span class="eng-text">Advanced phonics skills to easily recall letters forming a word, successfully initiating independent reading habits at a foundational level.</span></td>
                     </tr>
                     <tr>
-                        <td class="center-text">📚 情境主題與生活字彙<br>Thematic Vocabulary</td>
-                        <td>深入探索多元生活情境，透過精緻視覺圖卡與配對遊戲，無痛累積高頻率核心實用生活字彙。<br>
-                        <span class="eng-text">Explore diverse everyday themes, effortlessly accumulating high-frequency core vocabulary via visual match games.</span></td>
+                        <td class="center-text">📊 文法邏輯與寫作<br>Grammar & Writing</td>
+                        <td>系統化引導基礎文法結構（如現在進行式、過去式時態變化），並建立動筆書寫完整英文句子的能力。<br>
+                        <span class="eng-text">Systematically introduce essential structures like present/past tenses, gradually guiding children to construct complete and correct sentences.</span></td>
                     </tr>
                     <tr>
-                        <td class="center-text">📖 閱讀理解與直覺拼讀<br>Phonics & Reading</td>
-                        <td>結合進階 Phonics 自然發音技巧，培養看字能讀、聽音能寫的直覺，並開始挑戰中短篇故事的閱讀理解。<br>
-                        <span class="eng-text">Advance phonics combination skills to build strong text-reading intuitions and tackle short story comprehension with joy!</span></td>
+                        <td class="center-text">🗣️ 生活句型與對話<br>Practical Conversations</td>
+                        <td>熟練掌握日常高頻實用短語，能流利詢問與回答關於物品所有權、交通工具、時間、職業及過去活動。<br>
+                        <span class="eng-text">Master high-frequency daily phrases to confidently discuss possessions, clothing, destinations, exact time, occupations, and past events.</span></td>
+                    </tr>
+                    <tr>
+                        <td class="center-text">💡 自主學習養成<br>Independent Learning</td>
+                        <td>培養孩子在沒有家長協助下，能夠專注且獨立完成課堂作業與練習，建立高度學習成就感。<br>
+                        <span class="eng-text">Cultivate self-reliance, empowering children to complete their classwork and assignments independently without parental aid.</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -363,31 +339,31 @@
     <!-- ================= PAGE 2 ================= -->
     <div class="page">
         <div class="page-content" style="padding-top: 15px;">
-            <h2>🗺️ 8大生活主題與進階發音庫 | Themes & Phonics</h2>
-            <p>圍繞實用情境展開，帶領孩子在充滿趣味的進度中，穩紮穩打建立中階語感：</p>
+            <h2>🗺️ 8大單元主題與發音寶庫 | Themes & Phonics</h2>
+            <p>結合實用生活情境與跨學科主題，讓美語與孩子的日常世界完美連結：</p>
             <ul>
-                <li><strong>第一單元: 鄰里與社區 | Unit 1: At School & Neighborhood</strong> 🏡 <em>(發音 | Phonics: 進階雙子音拼讀)</em></li>
-                <li><strong>第二單元: 我的穿搭服飾 | Unit 2: Clothing & Styles</strong> 👗 <em>(發音 | Phonics: 長母音與組合拼讀)</em></li>
-                <li><strong>第三單元: 常見的休閒活動 | Unit 3: Places & Activities</strong> 🎡 <em>(發音 | Phonics: 複合子音結合律)</em></li>
-                <li><strong>第四單元: 家務與日常生活 | Unit 4: Household Chores</strong> 🧹 <em>(發音 | Phonics: 過去式動詞發音規則)</em></li>
-                <li><strong>第五單元: 在一年的季節裡 | Unit 5: Months & Seasons</strong> 🍂 <em>(發音 | Phonics: 連續母音結構)</em></li>
-                <li><strong>第六單元: 探索大自然環境 | Unit 6: Out and About</strong> 🌲 <em>(發音 | Phonics: 自然音節切分法)</em></li>
-                <li><strong>第七單元: 世界各地的旅行 | Unit 7: Travel & Transportation</strong> ✈️ <em>(發音 | Phonics: 異體字群發音)</em></li>
-                <li><strong>第八單元: 職業與我的夢想 | Unit 8: Future Occupations</strong> 👨‍🚀 <em>(發音 | Phonics: 多音節韻律感)</em></li>
+                <li><strong>第一單元: 在學校 | Unit 1: At School</strong> 🎒 <em>(發音 | Phonics: bl / gl / pl)</em></li>
+                <li><strong>第二單元: 認識服裝衣著 | Unit 2: Clothing</strong> 👕 <em>(發音 | Phonics: br / gr / pr)</em></li>
+                <li><strong>第三單元: 學校教室和常見商店 | Unit 3: Places</strong> 🏪 <em>(發音 | Phonics: cl / fl / sl)</em></li>
+                <li><strong>第四單元: 職業探索 | Unit 4: Occupations</strong> 👨‍⚕️ <em>(發音 | Phonics: er / ir / ur / or)</em></li>
+                <li><strong>第五單元: 課堂及課後活動 | Unit 5: Activities</strong> ⚽ <em>(發音 | Phonics: dr / tr)</em></li>
+                <li><strong>第六單元: 現在幾點鐘? | Unit 6: What Time Is It?</strong> ⏰ <em>(發音 | Phonics: sw / st)</em></li>
+                <li><strong>第七單元: 昨天和今天 | Unit 7: Yesterday and Today</strong> 📅 <em>(發音 | Phonics: sk / sn)</em></li>
+                <li><strong>第八單元: 我的家 | Unit 8: My Home</strong> 🏡 <em>(發音 | Phonics: sm / sp)</em></li>
             </ul>
-            <p><strong>🎁 專屬完美教材搭配 | Material Configuration：</strong><br>
-            精心搭配 Let's Go 3 進度講義與進階拼讀互動教具，全方位為孩子調校出最完美的直覺雙語大腦！</p>
+            <p><strong>🎁 額外加碼發音補充教材 | Bonus Phonics Materials：</strong><br>
+            本課程特別引進專業自然發音教材《New Phonics Kids 3 The Short Vowels》與《Phonics Kids Activity Book 3》，雙管齊下讓孩子的發音與直覺拼讀底子打得天衣無縫！</p>
 
-            <h2>📝 實用聽說練習精華 | Practical Conversations</h2>
+            <h2>📝 系統化文法基礎精華 | Grammar Essentials</h2>
             <ul>
-                <li>能流暢詢問並準確指引社區中不同場所與位置的方向。<br><span class="eng-text">Fluently ask for and give directions to various places within the neighborhood.</span></li>
-                <li>自信地描述自己或他人正在穿著的衣物、顏色以及款式穿搭。<br><span class="eng-text">Confidently describe clothing items, colors, and dressing styles of oneself and others.</span></li>
-                <li>熟練詢問他人的計畫，並分享自己最喜歡的休閒娛樂與去過的地點。<br><span class="eng-text">Master asking about plans and sharing leisure activities and places visited.</span></li>
-                <li>大方地表達並分配日常生活中的家務分工，學會責任與合作表達。<br><span class="eng-text">Express and delegate everyday household chores, learning responsibility and teamwork terms.</span></li>
-                <li>流利說出十二個月份與四季的天氣變化，並描述不同季節盛行的活動。<br><span class="eng-text">Fluently name the 12 months and four seasons, describing popular seasonal activities.</span></li>
-                <li>學會運用過去式動詞，精準分享昨天或上週末發生的精彩故事。<br><span class="eng-text">Learn to use past tense verbs to accurately share wonderful stories from yesterday or last weekend.</span></li>
-                <li>生動探討各種交通工具，並能夠規劃與詢問一段有趣的旅行冒險。<br><span class="eng-text">Vividly discuss modes of transportation and plan/ask about fun travel adventures.</span></li>
-                <li>自信分享未來的理想職業，並能描述不同工作在社會中的貢獻。<br><span class="eng-text">Confidently share dream occupations and describe the contributions of various professions.</span></li>
+                <li>會詢問他人擁有或未擁有的物品、表達自己擁有的物品。<br><span class="eng-text">Ask and answer questions about possessions and express what one owns.</span></li>
+                <li>詢問他人穿著的衣物及衣物的所有者。<br><span class="eng-text">Ask about clothing and ownership.</span></li>
+                <li>詢問某人正往何處去及所搭乘的交通工具。<br><span class="eng-text">Ask about destinations and transportation.</span></li>
+                <li>詢問職業、並簡述其工作內容。<br><span class="eng-text">Ask about occupations and describe job duties.</span></li>
+                <li>會說出星期以及課程名稱。<br><span class="eng-text">State days of the week and school subjects.</span></li>
+                <li>會運用頻率副詞、會說出較細的時間。<br><span class="eng-text">Use adverbs of frequency and tell exact time.</span></li>
+                <li>會運用過去式結構並詢問他人正在做的事情。<br><span class="eng-text">Use past tense structures and ask about current actions.</span></li>
+                <li><strong>核心語法架構 (Grammar Foundations)：</strong>名詞所有格、現在進行式、Which引導的選擇問句、have現在式問答、Be動詞過去式、規則與不規則動詞過去式、助動詞did、連接詞 but、時間介系詞與頻率副詞。<br><span class="eng-text">Master possessive nouns, present progressive, "Which" questions, "have" structures, past tense (Be-verbs, regular/irregular verbs, auxiliary "did"), conjunction "but", prepositions of time, and adverbs of frequency.</span></li>
             </ul>
         </div>
 
@@ -400,12 +376,6 @@
     <!-- ================= PAGE 3 ================= -->
     <div class="page">
         <div class="page-content" style="padding-top: 15px;">
-            <h2>📝 核心語法觀念 | Grammar Essentials</h2>
-            <div class="grammar-section">
-                <p style="margin: 0 0 6px 0; font-weight: bold;">精準解鎖中階時態：熟練現在進行式之進階雙向問答、初階動詞過去式變化（規則與不規則動詞變化）、方向介系詞（Next to / Across from）、代名詞所有格，以及問句 Whom/Whose 的靈活應用。</p>
-                <span class="eng-text" style="color: #666;">Unlock intermediate tenses: proficient in advanced Present Continuous forms, Past Simple tense rules, prepositions of direction, possessive pronouns, and Wh-questions.</span>
-            </div>
-
             <h2>📌 班級招生資訊 | Course Details</h2>
             <table class="center-table">
                 <thead>
@@ -417,42 +387,47 @@
                 <tbody>
                     <tr>
                         <td><strong>📅 課程日期 | Course Dates</strong></td>
-                        <td class="left-align">2026年8月31日正式開課 至 01月08日（每週一、三、五）<br>Starts from August 31, 2026 to January 8, 2027 (Every Mon, Wed, Fri)[cite: 1]</td>
+                        <td class="left-align">2026年8月31日正式開課 至 01月08日（每週一、三、五）<br>Starts from August 31, 2026 to January 8, 2027 (Every Mon, Wed, Fri)</td>
                     </tr>
                     <tr>
                         <td><strong>⏰ 上課時間 | Class Time</strong></td>
-                        <td class="left-align">每週星期一、三、五 下午 1:30 - 3:30 p.m. (每堂 2 小時)[cite: 1]<br>Every Mon, Wed, Fri from 1:30 PM to 3:30 PM (2 hours per class)[cite: 1]<br><span class="note" style="color:#0077b6; font-weight:bold;">⚠️ 註：週一另有 4:30-6:30 PM 彈性段調整，詳見手冊。</span></td>
+                        <td class="left-align">每週一 下午 4:30 - 6:30 p.m. / 每週三、五 下午 1:30 - 3:30 p.m.<br>Every Monday 4:30 - 6:30 p.m. & Every Wednesday and Friday 1:30 - 3:30 p.m.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>🔢 總堂數 | Total Lessons</strong></td>
+                        <td class="left-align">全期共 51 堂課<br>51 lessons in total for the entire semester</td>
                     </tr>
                     <tr>
                         <td><strong>🎒 招生對象 | Target Students</strong></td>
-                        <td class="left-align">國小二至四年級（具備 Let's Go 2 基礎或通過程度測試者）[cite: 1]<br>Elementary School Grades 2-4 (With LG2 foundation or passed the placement test)[cite: 1]</td>
+                        <td class="left-align">国小一至六年級（美語學習 1 年以上，具備基本聽說讀寫經驗者）<br>Elementary School Grades 1-6 (Minimum 1 year of English learning experience)</td>
                     </tr>
                     <tr>
                         <td><strong>👑 招生人數 | Class Size</strong></td>
-                        <td class="left-align">小班精緻教學，招生上限 10 人[cite: 1]<br>Small group class, 10 students max[cite: 1]</td>
+                        <td class="left-align">小班教學，招生人數10人<br>Small group class, 10 students max</td>
                     </tr>
                     <tr>
                         <td><strong>💰 課程學費 | Tuition Fee</strong></td>
                         <td class="left-align">
-                            <strong>NT$36,252元</strong>[cite: 1]
-                            <span class="note">備註：學費 $620 × 51堂 + 教材費 $1,572 + 學雜費 $3,060</span>[cite: 1]
-                            <span class="note" style="margin-top:2px;">Note: Tuition $620 × 51 lessons + Textbooks $1,572 + Fees $3,060</span>[cite: 1]
+                            <strong>NT$36,252元</strong>
+                            <span class="note">備註：學費 $620 × 51堂 + 教材費 $1,572 + 學雜費 $3,060</span>
+                            <span class="note" style="margin-top:2px;">Note: Tuition $620 × 51 lessons + Textbooks $1,572 + Fees $3,060</span>
                         </td>
                     </tr>
                 </tbody>
             </table>
 
-            <div class="pyp-badge" style="margin-top: 30px;">
-                <p style="font-size: 14px; color: #e74c3c; font-weight: bold;">🎯 點擊下方 Join Now 按鈕，系統將自動啟動「天線解碼核心」，為您瞬間選好班級、算好錢！</p>
+            <div class="footer">
+                ✨ 席次極度有限！現在就幫孩子預約體驗，踏出大膽自信開口的第一步！ ✨<br>
+                ✨ Seats are strictly limited! Book a trial lesson with Teacher Bobby today and take the first step toward bold fluency! Join us now! ✨
             </div>
         </div>
 
-        <!-- 📸 PAGE 3 最下方滿版 kids.png + 疊加在「中間黑頭髮小男孩」正上方的 join now 1.png 按鈕 -->
+        <!-- 📸 PAGE 3 最下方滿版 kids.png + 疊加在「中間黑頭髮小男孩」正上方的 join now 3.png 按鈕 -->
         <div class="last-page-footer-box">
-            <!-- 🎯 智慧定位與軍師天線完美對齊：網址後面串上 ?class=LG3 📡 -->
+            <!-- 🎯 🔧 依照最高指示：更換為 join now 3.png 並且完美串聯級數天線密碼 ?class=LG3 📡 -->
             <div class="join-us-btn-container">
                 <a href="contract.html?class=LG3">
-                    <img src="join now 1.png" alt="立即線上簽約鎖定名額" class="cta-join-us-img">
+                    <img src="join now 3.png" alt="立即線上簽約鎖定名額" class="cta-join-us-img">
                 </a>
             </div>
             <!-- 📸 底圖滿版左右填滿 -->
