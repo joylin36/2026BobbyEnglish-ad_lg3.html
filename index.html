@@ -10,7 +10,7 @@
             --uci-blue: #1b3d6d;
             --uci-gold: #fecc07;
             --soft-red: #e74c3c;
-            --lg3-blue: #0077b6; /* 💙 Let's Go 3 課本專屬蔚藍色晶片注入 */
+            --lg3-blue: #0077b6; /* 💙 Let's Go 3 課本專屬蔚藍色 */
         }
         
         * {
@@ -22,52 +22,53 @@
         body {
             background-color: #f0f4f8;
             margin: 0;
-            padding: 10px;
+            padding: 20px 10px;
             color: #333;
             line-height: 1.6;
         }
 
         .ad-container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
             background: #fff;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.15);
             border-radius: 12px;
             overflow: hidden;
             width: 100%;
         }
 
-        /* 💙 🎨 完美修復 1：最上方標題背景顏色 100% 更換為 Let's Go 3 課本動人蔚藍色 */
+        /* 💙 保留：最上方標題範圍與 Let's Go 3 經典蔚藍色背景 */
         .ad-header {
             background-color: var(--lg3-blue);
             color: #fff;
             text-align: center;
-            padding: 30px 20px;
+            padding: 35px 20px;
             border-bottom: 5px solid var(--uci-gold);
         }
 
-        /* 🎯 完美修復 2：更換為 Joy 主任指定之 3 級班最新震撼標題 */
+        /* 🎯 保留：指定之 3 級班最新震撼標題與文案範圍 */
         .ad-header h1 {
-            font-size: 24px;
+            font-size: 23px;
             margin: 0 0 12px 0;
             font-weight: bold;
             letter-spacing: 0.5px;
             line-height: 1.4;
             color: #fff;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.25);
         }
 
         .ad-header h2 {
-            font-size: 16px;
+            font-size: 15px;
             margin: 0 0 15px 0;
             font-weight: 500;
             opacity: 0.95;
             line-height: 1.5;
             color: var(--uci-gold);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.2);
         }
 
         .ad-header p {
-            font-size: 13.5px;
+            font-size: 13px;
             margin: 0;
             opacity: 0.9;
             font-style: italic;
@@ -75,56 +76,77 @@
         }
 
         .ad-body {
-            padding: 25px 20px;
+            padding: 30px 25px;
         }
 
-        .feature-box {
-            background-color: rgba(0, 119, 182, 0.04);
-            border-left: 4px solid var(--lg3-blue);
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .feature-title {
+        h2.section-heading { 
+            color: #2c3e50; 
+            border-bottom: 2px solid var(--lg3-blue); 
+            padding-bottom: 5px; 
+            margin-top: 30px; 
+            margin-bottom: 15px; 
+            font-size: 17px;
             font-weight: bold;
-            color: var(--uci-blue);
-            font-size: 15px;
-            margin-bottom: 5px;
         }
 
-        .feature-desc {
-            font-size: 13px;
-            color: #555;
+        h2.section-heading:first-of-type {
+            margin-top: 0;
         }
 
-        .info-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 25px 0;
+        p.paragraph-desc {
             font-size: 13.5px;
+            margin: 0 0 10px 0;
+            text-align: justify;
+            color: #444;
         }
 
-        .info-table th, .info-table td {
-            padding: 12px 10px;
-            border-bottom: 1px solid #eee;
+        .grammar-card { 
+            background-color: #f8fafc; 
+            border-left: 4px solid var(--lg3-blue); 
+            padding: 15px; 
+            margin-bottom: 20px; 
+            border-radius: 0 6px 6px 0; 
+            font-size: 13px;
         }
 
-        .info-table th {
-            width: 30%;
-            color: var(--lg3-blue);
+        /* 🔒 剛性方格表格地基 */
+        table.ad-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 15px; 
+            margin-bottom: 25px; 
+            font-size: 13px;
+            table-layout: fixed;
+            word-wrap: break-word;
+            border: 1px solid #dee2e6;
+        }
+
+        table.ad-table th, table.ad-table td { 
+            border: 1px solid #dee2e6; 
+            padding: 12px 10px; 
+            vertical-align: middle; 
+            text-align: left; 
+            line-height: 1.5;
+        }
+
+        table.ad-table th { 
+            background-color: #f1f5f9; 
+            color: var(--uci-blue); 
+            text-align: center; 
             font-weight: bold;
-            text-align: left;
         }
 
-        .info-table td {
-            color: #333;
-        }
+        .center-text { text-align: center; font-weight: bold; color: var(--uci-blue); }
+        .eng-text { color: #666; display: block; margin-top: 3px; font-size: 11.5px; font-style: italic; }
+        .note-text { font-size: 11px; color: #7f8c8d; display: block; margin-top: 2px; }
+
+        ul.list-style { padding-left: 20px; margin-bottom: 20px; }
+        ul.list-style li { margin-bottom: 8px; font-size: 13px; color: #333; }
 
         /* 👑 雙軌招生引流導向艙：50/50 完美比例按鈕排列 */
         .action-zone {
             background-color: #f8fafc;
-            padding: 25px 15px;
+            padding: 30px 20px;
             text-align: center;
             border-top: 1px dashed #ddd;
         }
@@ -133,21 +155,21 @@
             font-size: 14px;
             font-weight: bold;
             color: var(--soft-red);
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .btn-wrapper {
             display: flex;
             justify-content: space-between;
-            gap: 12px;
+            gap: 15px;
             width: 100%;
         }
 
-        /* 🎯 完美修復 3：雙按鈕無縫嵌入 2026 最新官方網址，外嵌防空火牆 */
+        /* 🎯 保留：雙按鈕無縫嵌入 2026 最新官方分流連結 */
         .action-btn {
             flex: 1;
-            padding: 14px 10px;
-            font-size: 14px;
+            padding: 15px 10px;
+            font-size: 14.5px;
             font-weight: bold;
             border-radius: 25px;
             text-decoration: none;
@@ -174,80 +196,143 @@
 
         .footer-banner {
             text-align: center;
-            font-size: 11px;
-            color: #888;
-            padding: 15px;
+            font-size: 11.5px;
+            color: #777;
+            padding: 20px 15px;
             background-color: #f4f7f6;
+            border-top: 1px solid #eee;
         }
     </style>
 </head>
 <body>
 
 <div class="ad-container">
-    <!-- 💙 廣告火箭大橫幅 -->
+    <!-- 💙 火箭大橫幅（保留設定） -->
     <div class="ad-header">
         <h1>Let's Go 3: Speak with Confidence!<br>✨聽說讀寫全方位！兒童美語思維與自信表達升級班</h1>
         <h2>Unlock Your Child’s Voice: From Learning Rules to Speaking with Absolute Confidence! 🚀</h2>
         <p>私立巴比美語短期補習班 ── 2026年秋季常態中級班盛大招生中</p>
     </div>
 
+    <!-- 📄 依照附加檔案 1:1 注入之招生內文完全體 -->
     <div class="ad-body">
-        <!-- 核心課程三大特色 -->
-        <div class="feature-box">
-            <div class="feature-title">🧠 核心思維養成 / English Thinking Mindset</div>
-            <div class="feature-desc">擺脫死記硬背！透過 Let's Go 3 精密編排的句型與情境對話，引導孩子從「單字直覺」升級到「完整句子表達」，培養真正的美語大腦。</div>
-        </div>
+        
+        <h2 class="section-heading">💡 課程理念 | Course Concept</h2>
+        <p class="paragraph-desc"><strong>從單字模仿到完整句子表達！巴比老師用主題探究與互動競賽，帶孩子自信解鎖流利聽說讀寫！</strong></p>
+        <p class="paragraph-desc">進入 Let's Go 3 的黃金進階期，我們不只讓孩子開口說，更著重於日常對話的「雙向延伸與思考」。透過中英雙語生動引導，讓孩子告別碎片化的單字回答，自然而然學會用完整且精準的句子表達自我、分享生活！</p>
+        <p class="paragraph-desc"><strong>From single words to complete sentences! Teacher Bobby integrates thematic inquiry and interactive contests to unlock fluent listening, speaking, reading, and writing!</strong>[cite: 3]</p>
+        <p class="paragraph-desc">In Level 3, we focus on sentence expansion and structural conversation. Through immersive bilingual scaffolding, kids transition smoothly from brief answers to expressing their own thoughts in full, confident English paragraphs.[cite: 3]</p>
 
-        <div class="feature-box">
-            <div class="feature-title">🗣️ 遊戲大膽說 / Speaking Boldly via Immersive Games</div>
-            <div class="feature-desc">搭配巴比老師獨家設計的實體互動與團隊遊戲，讓開口說英語變成一件好玩、有成就感的事，徹底粉碎孩子對外語的抗拒與害羞！</div>
-        </div>
-
-        <div class="feature-box">
-            <div class="feature-title">📚 聽說讀寫全面進階 / Four Skills Comprehensive Upgrade</div>
-            <div class="feature-desc">涵蓋 Phonics 自然發音進階應用、生活情境主題社交對話、短文閱讀啟蒙以及基礎英檢聽力與口說練習，全面對齊國際兒童美語標準。</div>
-        </div>
-
-        <!-- 📅 課程表核定區 -->
-        <div class="section-title" style="margin-top: 15px; background-color: var(--uci-blue); color:#fff; padding:6px 12px; font-size:14px; font-weight:bold; border-radius:4px; display:inline-block;">🎯 班別與開課核定課表 / Class Information</div>
-        <table class="info-table">
+        <h2 class="section-heading">🎯 課程核心教學重點 | Course Highlights</h2>
+        <p class="paragraph-desc">本課程專注於強化孩子的中階溝通語感，全方位扎根美語核心能力：</p>
+        <table class="ad-table">
+            <thead>
+                <tr>
+                    <th style="width: 32%;">教學指標 | Learning Focus</th>
+                    <th style="width: 68%;">核心養成特色 | Core Features</th>
+                </tr>
+            </thead>
             <tbody>
                 <tr>
-                    <th>就讀班別</th>
-                    <td style="font-weight: bold; color: var(--lg3-blue);">兒童美語中階班 (Let's Go 3)</td>
+                    <td class="center-text">🗣️ 句型擴展與流利表達<br>Sentence Fluency</td>
+                    <td>熟練運用中階日常社交問答，引導孩子從簡答跳躍到能夠使用主詞、動詞、時間、場所組成的完整長句。[cite: 3]<br>
+                    <span class="eng-text">Master intermediate daily Q&As, guiding children to confidently build structured, extended sentences.</span></td>
                 </tr>
                 <tr>
-                    <th>上課時段</th>
-                    <td style="font-weight: bold;">每週一 下午 4:30 - 6:30 p.m.<br>每週三、週五 下午 1:30 - 3:30 p.m.</td>
+                    <td class="center-text">📚 情境主題與生活字彙<br>Thematic Vocabulary</td>
+                    <td>深入探索多元生活情境，透過精緻視覺圖卡與配對遊戲，無痛累積高頻率核心實用生活字彙。[cite: 3]<br>
+                    <span class="eng-text">Explore diverse everyday themes, effortlessly accumulating high-frequency core vocabulary via visual match games.</span></td>
                 </tr>
                 <tr>
-                    <th>每週堂數</th>
-                    <td>每週上課 3 次，每次 2 小時（每週共計 6 小時）</td>
-                </tr>
-                <tr>
-                    <th>招生名額</th>
-                    <td style="color: var(--soft-red); font-weight: bold;">精緻小班制，每班嚴格限額 10 人（即將額滿）</td>
-                </tr>
-                <tr>
-                    <th>開課日期</th>
-                    <td>民國115年08月31日 正式開火起航🚀</td>
+                    <td class="center-text">📖 閱讀理解與直覺拼讀<br>Phonics & Reading</td>
+                    <td>結合進階 Phonics 自然發音技巧，培養看字能讀、聽音能寫的直覺，並開始挑戰中短篇故事的閱讀理解。[cite: 3]<br>
+                    <span class="eng-text">Advance phonics combination skills to build strong text-reading intuitions and tackle short story comprehension with joy!</span></td>
                 </tr>
             </tbody>
         </table>
+
+        <h2 class="section-heading">🗺️ 8大生活主題與進階發音庫 | Themes & Phonics</h2>
+        <p class="paragraph-desc">圍繞實用情境展開，帶領孩子在充滿趣味的進度中，穩紮穩打建立中階語感：</p>
+        <ul class="list-style">
+            <li><strong>第一單元: 鄰里與社區 | Unit 1: At School & Neighborhood</strong> 🏡 <em>(發音 | Phonics: 進階雙子音拼讀)</em>[cite: 3]</li>
+            <li><strong>第二單元: 我的穿搭服飾 | Unit 2: Clothing & Styles</strong> 👗 <em>(發音 | Phonics: 長母音與組合拼讀)</em>[cite: 3]</li>
+            <li><strong>第三單元: 常見的休閒活動 | Unit 3: Places & Activities</strong> 🎡 <em>(發音 | Phonics: 複合子音結合律)</em>[cite: 3]</li>
+            <li><strong>第四單元: 家務與日常生活 | Unit 4: Household Chores</strong> 🧹 <em>(發音 | Phonics: 過去式動詞發音規則)</em>[cite: 3]</li>
+            <li><strong>第五單元: 在一年的季節裡 | Unit 5: Months & Seasons</strong> 🍂 <em>(發音 | Phonics: 連續母音結構)</em>[cite: 3]</li>
+            <li><strong>第六單元: 探索大自然環境 | Unit 6: Out and About</strong> 🌲 <em>(發音 | Phonics: 自然音節切分法)</em>[cite: 3]</li>
+            <li><strong>第七單元: 世界各地的旅行 | Unit 7: Travel & Transportation</strong> ✈️ <em>(發音 | Phonics: 異體字群發音)</em>[cite: 3]</li>
+            <li><strong>第八單元: 職業與我的夢想 | Unit 8: Future Occupations</strong> 👨‍🚀 <em>(發音 | Phonics: 多音節韻律感)</em>[cite: 3]</li>
+        </ul>
+        <p class="paragraph-desc"><strong>🎁 專屬完美教材搭配 | Material Configuration：</strong><br>
+        精心搭配 Let's Go 3 進度講義與進階拼讀互動教具，全方位為孩子調校出最完美的直覺雙語大腦！[cite: 3]</p>
+
+        <h2 class="section-heading">📝 實用聽說練習精華 | Practical Conversations</h2>
+        <ul class="list-style">
+            <li>能流暢詢問並準確指引社區中不同場所與位置的方向。[cite: 3]<br><span class="eng-text">Fluently ask for and give directions to various places within the neighborhood.</span></li>
+            <li>自信地描述自己或他人正在穿著的衣物、顏色以及款式穿搭。[cite: 3]<br><span class="eng-text">Confidently describe clothing items, colors, and dressing styles of oneself and others.</span></li>
+            <li>熟練詢問他人的計畫，並分享自己最喜歡的休閒娛樂與去過的地點。[cite: 3]<br><span class="eng-text">Master asking about plans and sharing leisure activities and places visited.</span></li>
+            <li>大方地表達並分配日常生活中的家務分工，學會責任與合作表達。[cite: 3]<br><span class="eng-text">Express and delegate everyday household chores, learning responsibility and teamwork terms.</span></li>
+            <li>流利說出十二個月份與四季的天氣變化，並描述不同季節盛行的活動。[cite: 3]<br><span class="eng-text">Fluently name the 12 months and four seasons, describing popular seasonal activities.</span></li>
+            <li>學會運用過去式動詞，精準分享昨天或上週末發生的精彩故事。[cite: 3]<br><span class="eng-text">Learn to use past tense verbs to accurately share wonderful stories from yesterday or last weekend.</span></li>
+            <li>生動探討各種交通工具，並能夠規劃與詢問一段有趣的旅行冒險。[cite: 3]<br><span class="eng-text">Vividly discuss modes of transportation and plan/ask about fun travel adventures.</span></li>
+            <li>自信分享未來的理想職業，並能描述不同工作在社會中的貢獻。[cite: 3]<br><span class="eng-text">Confidently share dream occupations and describe the contributions of various professions.</span></li>
+        </ul>
+
+        <h2 class="section-heading">官方認證核心語法 | Grammar Essentials</h2>
+        <div class="grammar-card">
+            <p style="margin: 0 0 6px 0; font-weight: bold; color: var(--uci-blue);">精準解鎖中階時態：熟練現在進行式之進階雙向問答、初階動詞過去式變化（規則與不規則動詞變化）、方向介系詞（Next to / Across from）、代名詞所有格，以及問句 Whom/Whose 的靈活應用。[cite: 3]</p>
+            <span class="eng-text" style="color: #555;">Unlock intermediate tenses: proficient in advanced Present Continuous forms, Past Simple tense rules, prepositions of direction, possessive pronouns, and Wh-questions.</span>
+        </div>
+
+        <h2 class="section-heading">📌 班級招生資訊 | Course Details</h2>
+        <table class="ad-table" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th style="width: 35%;">招生項目 | Information Item</th>
+                    <th style="width: 65%;">班級詳細資訊 | Class Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;">📅 課程日期 | Course Dates</td>
+                    <td>2026年8月31日正式開課 至 01月08日（每週一、三、五）[cite: 3]<br>Starts from August 31, 2026 to January 8, 2027[cite: 3]</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;">⏰ 上課時間 | Class Time</td>
+                    <td style="text-align: left; padding-left: 15px;">每週星期一、三、五 下午 1:30 - 3:30 p.m. (每堂 2 小時)[cite: 3]<br>Every Mon, Wed, Fri from 1:30 PM to 3:30 PM (2 hours per class)[cite: 3]<br><span class="note-text" style="color:#0077b6; font-weight:bold;">⚠️ 註：週一另有 4:30-6:30 PM 彈性時段，詳見手冊。</span></td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;">🎒 招生對象 | Target Students</td>
+                    <td>國小二至四年級（具備 Let's Go 2 基礎或通過程度測試者）[cite: 3]<br>Elementary School Grades 2-4 (With LG2 foundation)[cite: 3]</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;">👑 招生人數 | Class Size</td>
+                    <td>小班精緻教學，招生上限 10 人[cite: 3]<br>Small group class, 10 students max</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;">💰 課程學費 | Tuition Fee</td>
+                    <td style="text-align: left; padding-left: 15px;">
+                        <strong style="color: var(--soft-red); font-size: 15px;">NT$36,252元</strong>[cite: 3]
+                        <span class="note-text">明細：學費 $620 × 51堂 + 教材費 $1,572 + 學雜費 $3,060</span>[cite: 3]
+                        <span class="note-text">Note: Tuition $620 × 51 lessons + Textbooks $1,572 + Fees $3,060</span>[cite: 3]
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
     </div>
 
-    <!-- 👑 雙軌招生引流導向艙 -->
+    <!-- 👑 雙軌招生引流導向艙（保留設定） -->
     <div class="action-zone">
         <div class="action-hint">⚡ 2026 秋季黃金名額釋出中！請選擇下方通道辦理：</div>
         <div class="btn-wrapper">
-            <!-- 報名表天線 -->
+            <!-- 保留官方網址連結 -->
             <a href="https://joylin36.github.io/2026BobbyEnglish-Lets-Go-lg3.html/" target="_blank" class="action-btn btn-enroll">📝 點我直達 ── 線上報名表</a>
-            <!-- 契約書天線 -->
             <a href="https://joylin36.github.io/2026BobbyEnglish-Contract-lg3.html/" target="_blank" class="action-btn btn-contract">📜 點我閱讀 ── 定型化契約</a>
         </div>
     </div>
 
-    <!-- 溫暖大口號 -->
+    <!-- 尾部口號與大本營資訊 -->
     <div class="footer-banner">
         330桃園市桃園區莊二街156號1樓 | 專線：03-2161338<br>
         巴比美語，陪伴孩子快樂成長與學習！Joyful learning, professional growth with Bobby English!
