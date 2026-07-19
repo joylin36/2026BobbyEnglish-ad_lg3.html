@@ -72,34 +72,39 @@
             overflow: hidden;
         }
 
-        /* 👑 🎨 完美調校 1：第一行英文放大加滿滿 */
+        /* 👑 🎨 完美調校 1：第一行英文放大加滿滿，等距外邊距落鎖 */
         .title-group h1 span.en-main-title { 
             display: block;
             font-size: 25px; 
             font-weight: bold;
-            line-height: 1.3;
+            line-height: 1.2;
             color: #fff;
-            margin-bottom: 6px;
+            margin: 0 0 12px 0;
+            padding: 0;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
         }
 
-        /* 👑 🎨 完美調校 2：第二行中文縮小，且左右兩端完美加上對稱閃亮星星 ✨ */
+        /* 👑 🎨 完美調校 2：第二行中文縮小，對稱雙星星，等距外邊距落鎖 */
         .title-group h1 span.zh-sub-title {
             display: block;
             font-size: 15.5px;
             font-weight: bold;
-            line-height: 1.4;
+            line-height: 1.2;
             color: var(--uci-gold);
+            margin: 0 0 12px 0;
+            padding: 0;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
         }
 
+        /* 👑 🎨 完美調校 3：第三行英文細字副標，清空預設邊距，達成三行完全等距 */
         .title-group h2 {
             font-size: 13px;
-            margin: 10px 0 0 0;
             font-weight: bold;
             color: #fff;
             opacity: 0.95;
             line-height: 1.4;
+            margin: 0;
+            padding: 0;
         }
 
         /* 巴比專屬置右去背 Logo */
@@ -175,7 +180,7 @@
             font-weight: bold;
         }
 
-        /* 👑 🎨 完美調校 3：依據最高指示，將教學指標欄位的文字全部置中對齊 */
+        /* 👑 🎨 教學指標欄位的文字 100% 置中對齊 */
         .center-text { text-align: center !important; font-weight: bold; color: var(--uci-blue); }
         .left-align { text-align: left !important; }
         
@@ -296,7 +301,7 @@
     <!-- ================= PAGE 1 ================= -->
     <div class="page">
         <div class="page-content">
-            <!-- 🚀 第一頁標題：刪除招生中贅句，對齊英文放大、中文縮小、左右雙星星對稱美學 -->
+            <!-- 🚀 第一頁標題：精準三行等距、英文放大、中文縮小、左右雙星星對稱美學 -->
             <div class="header-flex-box">
                 <div class="title-group">
                     <h1>
@@ -309,8 +314,8 @@
             </div>
 
             <h2 class="section-heading">💡 課程理念 | Course Concept</h2>
-            <p class="paragraph-desc"><strong>從「愛開口」邁向「有邏輯」！Let's Go 3正式帶領孩子跨越純口語遊戲，啟動系統化結構。</strong></p>
-            <p class="paragraph-desc">本課程將帶領孩子跨越初階的純口語對話，全面啟動英語閱讀理解、系統化文法結構與精準的單句書寫。巴比老師運用嚴謹而不嚴肅的專業引導，讓孩子自然地將零散單字拼湊成完整且符合邏輯的想法，達到大膽說、自信寫的嶄新里程碑！[cite: 3]</p>
+            <p class="paragraph-desc"><strong>從「愛開口」邁向「有邏輯」！Let's Go 3正式帶領孩子跨越純口語遊戲，啟動系統化結構。</strong>[cite: 3]</p>
+            <p class="paragraph-desc">本課程將帶領孩子跨越初階的純口語對話，全面啟動英語閱讀理解、系統化文法結構與精準的單句書寫。[cite: 3]巴比老師運用嚴謹而不嚴肅的專業引導，讓孩子自然地將零散單字拼湊成完整且符合邏輯的想法，達到大膽說、自信寫的嶄新里程碑！[cite: 3]</p>
             <p class="paragraph-desc"><strong>Moving from fun conversations to structured language! Let's Go 3 introduces foundational reading comprehension, essential grammar rules, and basic sentence writing.</strong>[cite: 3]</p>
 
             <h2 class="section-heading">◎課程核心教學重點 | Course Highlights</h2>
@@ -373,7 +378,7 @@
             <p class="paragraph-desc"><strong>🎁 額外發音補充教材 | Bonus Phonics Materials：</strong><br>
             本課程特別引進專業自然發音教材《New Phonics Kids 3 The Short Vowels》與《Phonics Kids Activity Book 3》，雙管齊下讓孩子的發音與直覺拼讀底子打得天衣無縫！[cite: 3]</p>
 
-            <!-- 👑 🎨 完美改裝 4：依據最高指示，將聽說練習精華主題平移至「第二頁」降落安放 -->
+            <!-- 👑 🎨 實用聽說練習精華，完美於第二頁降落安放 -->
             <h2 class="section-heading">📝 實用聽說練習精華 | Practical Conversations</h2>
             <ul class="list-style">
                 <li>會詢問他人擁有或未擁有的物品、表達自己擁有的物品。[cite: 3]<br><span class="eng-text">Ask and answer questions about possessions and express what one owns.</span></li>
@@ -442,14 +447,14 @@
                 </tbody>
             </table>
 
-            <!-- 👑 🎨 完美改裝 5：將舊口號換裝為更熱情的全新標語，中英文對齊通電 -->
+            <!-- 🎯 全新熱情號角口號，中英雙語通電對齊 -->
             <div class="pyp-badge">
                 <p>現在就加入我們的學習陣容吧!</p>
                 <p style="font-size: 11px; font-weight: normal; color: #666; margin-top: 2px;">Join our learning journey today!</p>
             </div>
         </div>
 
-        <!-- 📸 PAGE 3 最下方滿版 kids.png + 🎯 保留原設定之懸浮秘密天線 join now 3.png 按鈕 -->
+        <!-- 📸 PAGE 3 最下方滿版 kids.png + 🎯 完美正名落鎖：join now 3.png 秘密天線懸浮按鈕 -->
         <div class="last-page-footer-box">
             <div class="join-us-btn-container">
                 <a href="https://joylin36.github.io/2026BobbyEnglish-Contract-lg3.html/?class=LG3" target="_blank">
