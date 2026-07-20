@@ -60,7 +60,7 @@
             gap: 20px;
             margin-bottom: 25px;
             background-color: var(--lg3-blue);
-            padding: 20px 25px;
+            padding: 25px 25px;
             border-radius: 6px;
             border-bottom: 4px solid var(--uci-gold);
         }
@@ -72,7 +72,7 @@
             overflow: hidden;
         }
 
-        /* 👑 🎨 第一行英文放大加滿滿，等距外邊距落鎖 */
+        /* 👑 🎨 完美排版：第一行英文放大加滿滿，等距外邊距落鎖 */
         .title-group h1 span.en-main-title { 
             display: block;
             font-size: 25px; 
@@ -84,7 +84,7 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
         }
 
-        /* 👑 🎨 第二行中文縮小，對稱雙星星，等距外邊距落鎖 */
+        /* 👑 🎨 完美排版：第二行中文縮小，且最左與最右兩端對稱加上閃亮星星 ✨ */
         .title-group h1 span.zh-sub-title {
             display: block;
             font-size: 15.5px;
@@ -223,7 +223,7 @@
             border: none;
         }
 
-        /* 🎯 最後一頁壓軸極簡 Join us 貼滿艙 */
+        /* 🎯 最後一頁壓軸極簡 Join us 雙軌引流並排艙 */
         .last-page-footer-box {
             width: calc(100% + 80px);
             margin-left: -40px;
@@ -233,19 +233,28 @@
             display: block;
         }
 
-        /* 🎯 智慧按鈕定位：懸浮於上句文字與小男孩頭髮正中間 */
+        /* 🎯 智慧按鈕定位：懸浮於上句文字與小男孩頭髮正中間，改裝為 50/50 雙軌並排連結 */
         .join-us-btn-container {
             position: absolute;
             bottom: 76%; 
             left: 50%;
             transform: translateX(-50%);
             z-index: 999; 
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            width: 60%;
+            max-width: 260px;
+        }
+
+        .join-btn-link {
+            flex: 1;
+            display: block;
+            text-decoration: none;
         }
 
         .cta-join-us-img {
             width: 100%;
-            max-width: 110px; 
             height: auto;
             cursor: pointer;
             transition: transform 0.2s, filter 0.2s;
@@ -253,8 +262,8 @@
         }
 
         .cta-join-us-img:hover {
-            transform: scale(1.05);
-            filter: brightness(1.08);
+            transform: scale(1.06);
+            filter: brightness(1.1);
         }
 
         /* 🚨 核心剛性 A4 防跑版列印保護 */
@@ -290,7 +299,7 @@
             table.ad-table th { min-width: 110px; }
             .footer-image-box { width: calc(100% + 40px); margin-left: -20px; }
             .last-page-footer-box { width: calc(100% + 40px); margin-left: -20px; }
-            .join-us-btn-container { bottom: 69%; } 
+            .join-us-btn-container { bottom: 69%; width: 80%; } 
         }
     </style>
 </head>
@@ -301,7 +310,7 @@
     <!-- ================= PAGE 1 ================= -->
     <div class="page">
         <div class="page-content">
-            <!-- 🚀 第一頁標題：精準三行等距、英文放大、中文縮小、左右雙星星對稱美學 -->
+            <!-- 🚀 第一頁標題：完美繼承 Let's Go 1 黃金對稱美學，行距完全等距離 -->
             <div class="header-flex-box">
                 <div class="title-group">
                     <h1>
@@ -313,15 +322,17 @@
                 <img src="BOBBY ENGLISH SCHOOL_去背檔.png" alt="巴比美語補習班專屬去背標章" class="logo-img">
             </div>
 
+            <!-- 每一頁每個主題前面皆加上可愛的圖檔 💡 -->
             <h2 class="section-heading">💡 課程理念 | Course Concept</h2>
             <p class="paragraph-desc"><strong>從「愛開口」邁向「有邏輯」！Let's Go 3正式帶領孩子跨越純口語遊戲，啟動系統化結構。</strong></p>
             <p class="paragraph-desc">本課程將帶領孩子跨越初階的純口語對話，全面啟動英語閱讀理解、系統化文法結構與精準的單句書寫。巴比老師運用嚴謹而不嚴肅的專業引導，讓孩子自然地將零散單字拼湊成完整且符合邏輯的想法，達到大膽說、自信寫的嶄新里程碑！</p>
             <p class="paragraph-desc"><strong>Moving from fun conversations to structured language! Let's Go 3 introduces foundational reading comprehension, essential grammar rules, and basic sentence writing.</strong></p>
 
-            <h2 class="section-heading">◎課程核心教學重點 | Course Highlights</h2>
+            <!-- 每一頁每個主題前面皆加上可愛的圖檔 🎯 -->
+            <h2 class="section-heading">🎯 課程核心教學重點 | Course Highlights</h2>
             <p class="paragraph-desc">為了幫孩子奠定穩固之中級美語核心實力，本課程專注於以下全方位的學習發展：</p>
             
-            <!-- 👑 🎨 四個核心指標完美拼合於同一個剛性表格，左側指標文字全部置中對齊 -->
+            <!-- 四個核心指標完美拼合於同一個剛性表格，左側指標文字置中 -->
             <table class="ad-table">
                 <thead>
                     <tr>
@@ -363,6 +374,7 @@
     <!-- ================= PAGE 2 ================= -->
     <div class="page">
         <div class="page-content" style="padding-top: 15px;">
+            <!-- 每一頁每個主題前面皆加上可愛的圖檔 🗺️ -->
             <h2 class="section-heading" style="margin-top: 0;">🗺️ 8大單元主題與發音寶庫 | Themes & Phonics</h2>
             <p class="paragraph-desc">結合實用生活情境與跨學科主題，讓美語與孩子的日常世界完美連結：</p>
             <ul class="list-style">
@@ -378,10 +390,10 @@
             <p class="paragraph-desc"><strong>🎁 額外發音補充教材 | Bonus Phonics Materials：</strong><br>
             本課程特別引進專業自然發音教材《New Phonics Kids 3 The Short Vowels》與《Phonics Kids Activity Book 3》，雙管齊下讓孩子的發音與直覺拼讀底子打得天衣無縫！</p>
 
-            <!-- 👑 🎨 實用聽說練習精華，完美於第二頁降落安放 -->
+            <!-- 每一頁每個主題前面皆加上可愛的圖檔 📝，且平移至第二頁安放 -->
             <h2 class="section-heading">📝 實用聽說練習精華 | Practical Conversations</h2>
             <ul class="list-style">
-                <li>會詢問他人擁有或未擁有的物品、表達自己擁有的物品。<br><span class="eng-text">Ask and answer questions about possessions and express what one owns.</span></li>
+                <li>會詢問他人擁有 or 未擁有的物品、表達自己擁有的物品。<br><span class="eng-text">Ask and answer questions about possessions and express what one owns.</span></li>
                 <li>詢問他人穿著的衣物及衣物的所有者。<br><span class="eng-text">Ask about clothing and ownership.</span></li>
                 <li>詢問某人正往何處去及所搭乘的交通工具。<br><span class="eng-text">Ask about destinations and transportation.</span></li>
                 <li>詢問職業、並簡述其工作內容。<br><span class="eng-text">Ask about occupations and describe job duties.</span></li>
@@ -400,6 +412,7 @@
     <!-- ================= PAGE 3 ================= -->
     <div class="page">
         <div class="page-content" style="padding-top: 15px;">
+            <!-- 每一頁每個主題前面皆加上可愛的圖檔 📝 -->
             <h2 class="section-heading" style="margin-top: 0;">📝 系統化文法基礎精華 | Grammar Essentials</h2>
             <div class="grammar-section">
                 <p style="margin: 0 0 5px 0; font-weight: bold; color: var(--uci-blue);">核心語法架構 (Grammar Foundations):</p>
@@ -407,6 +420,7 @@
                 <span class="eng-text" style="color: #666; margin-top: 4px;">Master possessive nouns, present progressive, "Which" questions, "have" structures, past tense (Be-verbs, regular/irregular verbs, auxiliary "did"), conjunction "but", prepositions of time, and adverbs of frequency.</span>
             </div>
 
+            <!-- 每一頁每個主題前面皆加上可愛的圖檔 📌 -->
             <h2 class="section-heading">📌 班級招生資訊 | Course Details</h2>
             <table class="center-table ad-table">
                 <thead>
@@ -447,18 +461,23 @@
                 </tbody>
             </table>
 
-            <!-- 🎯 全新熱情號角口號，中英雙語通電對齊 -->
+            <!-- 💖 全新熱情招生句子：擺脫名額有限的匠氣，激發家長共鳴 💖 -->
             <div class="pyp-badge">
-                <p>現在就加入我們的學習陣容吧!</p>
-                <p style="font-size: 11px; font-weight: normal; color: #666; margin-top: 2px;">Join our learning journey today!</p>
+                <p>和我們一起踏上美語探究的精彩旅程，大膽解鎖孩子自信表達的超能力吧！</p>
+                <p style="font-size: 11px; font-weight: normal; color: #666; margin-top: 2px;">Embark on this exciting English journey with us and unlock your child's superpower of confident expression!</p>
             </div>
         </div>
 
-        <!-- 📸 PAGE 3 最下方滿版 kids.png + 🎯 完美重裝落鎖：join now 3.png 秘密天線懸浮按鈕直達線上報名表 -->
+        <!-- 📸 PAGE 3 最下方滿版 kids.png + 🎯 雙軌引流並排：全新裝載「線上報名表」與「定型化契約」雙按鈕！ -->
         <div class="last-page-footer-box">
             <div class="join-us-btn-container">
-                <a href="https://joylin36.github.io/2026BobbyEnglish-Lets-Go-lg3.html/" target="_blank">
-                    <img src="join now 3.png" alt="立即線上報名鎖定名額" class="cta-join-us-img">
+                <!-- 左側按鈕：直通巴比線上電子報名表 📝 -->
+                <a href="https://joylin36.github.io/2026BobbyEnglish-Lets-Go-lg3.html/" target="_blank" class="join-btn-link">
+                    <img src="join now 3.png" alt="立即填寫線上報名表鎖定名額" class="cta-join-us-img">
+                </a>
+                <!-- 右側按鈕：直通定型化契約書 📜 -->
+                <a href="https://joylin36.github.io/2026BobbyEnglish-Contract-lg3.html/" target="_blank" class="join-btn-link">
+                    <img src="join now 3.png" alt="立即線上簽署服務契約書" class="cta-join-us-img">
                 </a>
             </div>
             <img src="kids.png" alt="巴比美語學員快樂探究合照" class="page-footer-img">
